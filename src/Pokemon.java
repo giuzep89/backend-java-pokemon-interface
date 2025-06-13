@@ -4,6 +4,7 @@ import java.util.List;
 
 public abstract class Pokemon {
     private final String type;
+    private final List<String> attacks = Arrays.asList();
     private final String name;
     private final int level;
     private int HP;
@@ -17,6 +18,8 @@ public abstract class Pokemon {
         this.food = food;
         this.HP = HP;
     }
+
+
 
     public String getType() {
         return type;
@@ -50,6 +53,7 @@ public abstract class Pokemon {
         return this.HP;
     }
 
-    public boolean getAttacks() {
+    public List<String> getAttacks() {
+        return attacks;
     }
 }
