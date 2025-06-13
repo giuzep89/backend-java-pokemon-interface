@@ -3,8 +3,6 @@ import java.util.List;
 
 
 public abstract class Pokemon {
-    private final String type;
-    private final List<String> attacks = Arrays.asList();
     private final String name;
     private final int level;
     private int HP;
@@ -19,11 +17,6 @@ public abstract class Pokemon {
         this.HP = HP;
     }
 
-
-
-    public String getType() {
-        return type;
-    }
 
     public String getName() {
         return name;
@@ -53,7 +46,7 @@ public abstract class Pokemon {
         return this.HP;
     }
 
-    public List<String> getAttacks() {
-        return attacks;
-    }
+    public abstract String getType();
+
+    public abstract List<String> getAttacks();
 }
