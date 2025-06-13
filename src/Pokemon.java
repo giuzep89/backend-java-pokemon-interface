@@ -9,6 +9,7 @@ public abstract class Pokemon {
     private final String food;
     private final String sound;
 
+
     public Pokemon(String name, int level, int HP, String food, String sound) {
         this.name = name;
         this.level = level;
@@ -18,7 +19,7 @@ public abstract class Pokemon {
     }
 
 
-    public String getName() {
+    public  String getName() {
         return name;
     }
 

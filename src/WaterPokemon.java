@@ -3,7 +3,7 @@ import java.util.List;
 
 public class WaterPokemon extends Pokemon {
     private final String type = "water";
-    private final List<String> attacks = Arrays.asList();
+    private final List<String> attacks = Arrays.asList("surf", "hydroPump", "hydroCanon", "rainDance");
 
     public WaterPokemon(String name, int level, int HP, String food, String sound) {
         super(name, level, HP, food, sound);
