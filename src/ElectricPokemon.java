@@ -16,31 +16,31 @@ public class ElectricPokemon extends Pokemon {
         switch (gymPokemon.getType()){
             case "water":
                 damage = 15;
-                System.out.println(gymPokemon + " loses " + damage + " hp");
+                System.out.println(gymPokemon.getName() + " loses " + damage + " hp");
                 updatedHP = gymPokemon.getHP() - damage;
                 gymPokemon.setHP(updatedHP);
-                System.out.println(gymPokemon + " has " + gymPokemon.getHP() + " HP left");
+                System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHP() + " HP left");
                 break;
             case "grass":
                 damage = 10;
-                System.out.println(gymPokemon + " loses " + damage + " hp");
+                System.out.println(gymPokemon.getName() + " loses " + damage + " hp");
                 updatedHP = gymPokemon.getHP() - damage;
                 gymPokemon.setHP(updatedHP);
-                System.out.println(gymPokemon + " has " + gymPokemon.getHP() + " HP left");
+                System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHP() + " HP left");
                 break;
             case "fire":
                 damage = 8;
-                System.out.println(gymPokemon + " loses " + damage + " hp");
+                System.out.println(gymPokemon.getName() + " loses " + damage + " hp");
                 updatedHP = gymPokemon.getHP() - damage;
                 gymPokemon.setHP(updatedHP);
-                System.out.println(gymPokemon + " has " + gymPokemon.getHP() + " HP left");
+                System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHP() + " HP left");
                 break;
             case "electric":
                 damage = 5;
-                System.out.println(gymPokemon + " loses " + damage + " hp");
+                System.out.println(gymPokemon.getName() + " loses " + damage + " hp");
                 updatedHP = gymPokemon.getHP() - damage;
                 gymPokemon.setHP(updatedHP);
-                System.out.println(gymPokemon + " has " + gymPokemon.getHP() + " HP left");
+                System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHP() + " HP left");
                 break;
         }
 
@@ -53,36 +53,69 @@ public class ElectricPokemon extends Pokemon {
         switch (gymPokemon.getType()){
             case "water":
                 damage = 15;
-                System.out.println(gymPokemon + " loses " + damage + " hp");
+                System.out.println(gymPokemon.getName() + " loses " + damage + " hp");
                 updatedHP = gymPokemon.getHP() - damage;
                 gymPokemon.setHP(updatedHP);
-                System.out.println(gymPokemon + " has " + gymPokemon.getHP() + " HP left");
+                System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHP() + " HP left");
                 break;
             case "grass":
                 damage = 10;
-                System.out.println(gymPokemon + " loses " + damage + " hp");
+                System.out.println(gymPokemon.getName() + " loses " + damage + " hp");
                 updatedHP = gymPokemon.getHP() - damage;
                 gymPokemon.setHP(updatedHP);
-                System.out.println(gymPokemon + " has " + gymPokemon.getHP() + " HP left");
+                System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHP() + " HP left");
                 break;
             case "fire":
                 damage = 8;
-                System.out.println(gymPokemon + " loses " + damage + " hp");
+                System.out.println(gymPokemon.getName() + " loses " + damage + " hp");
                 updatedHP = gymPokemon.getHP() - damage;
                 gymPokemon.setHP(updatedHP);
-                System.out.println(gymPokemon + " has " + gymPokemon.getHP() + " HP left");
+                System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHP() + " HP left");
                 break;
             case "electric":
                 damage = 5;
-                System.out.println(gymPokemon + " loses " + damage + " hp");
+                System.out.println(gymPokemon.getName() + " loses " + damage + " hp");
                 updatedHP = gymPokemon.getHP() - damage;
                 gymPokemon.setHP(updatedHP);
-                System.out.println(gymPokemon + " has " + gymPokemon.getHP() + " HP left");
+                System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHP() + " HP left");
                 break;
         }
     }
 
     public void thunder(Pokemon pokemon, Pokemon gymPokemon) {
+        System.out.println(pokemon + " attacks " + gymPokemon + " with thunder");
+        int damage;
+        int updatedHP;
+        switch (gymPokemon.getType()) {
+            case "water":
+                damage = 15;
+                System.out.println(gymPokemon.getName() + " loses " + damage + " hp");
+                updatedHP = gymPokemon.getHP() - damage;
+                gymPokemon.setHP(updatedHP);
+                System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHP() + " HP left");
+                break;
+            case "grass":
+                damage = 10;
+                System.out.println(gymPokemon.getName() + " loses " + damage + " hp");
+                updatedHP = gymPokemon.getHP() - damage;
+                gymPokemon.setHP(updatedHP);
+                System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHP() + " HP left");
+                break;
+            case "fire":
+                damage = 8;
+                System.out.println(gymPokemon.getName() + " loses " + damage + " hp");
+                updatedHP = gymPokemon.getHP() - damage;
+                gymPokemon.setHP(updatedHP);
+                System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHP() + " HP left");
+                break;
+            case "electric":
+                int bonusHP = 5;
+                System.out.println(gymPokemon.getName() + " gains " + bonusHP + " hp");
+                updatedHP = gymPokemon.getHP() + bonusHP;
+                gymPokemon.setHP(updatedHP);
+                System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHP() + " HP left");
+                break;
+        }
     }
 
     public void voltTackle(Pokemon pokemon, Pokemon gymPokemon) {
@@ -92,31 +125,31 @@ public class ElectricPokemon extends Pokemon {
         switch (gymPokemon.getType()){
             case "water":
                 damage = 15;
-                System.out.println(gymPokemon + " loses " + damage + " hp");
+                System.out.println(gymPokemon.getName() + " loses " + damage + " hp");
                 updatedHP = gymPokemon.getHP() - damage;
                 gymPokemon.setHP(updatedHP);
-                System.out.println(gymPokemon + " has " + gymPokemon.getHP() + " HP left");
+                System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHP() + " HP left");
                 break;
             case "grass":
                 damage = 10;
-                System.out.println(gymPokemon + " loses " + damage + " hp");
+                System.out.println(gymPokemon.getName() + " loses " + damage + " hp");
                 updatedHP = gymPokemon.getHP() - damage;
                 gymPokemon.setHP(updatedHP);
-                System.out.println(gymPokemon + " has " + gymPokemon.getHP() + " HP left");
+                System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHP() + " HP left");
                 break;
             case "fire":
                 damage = 8;
-                System.out.println(gymPokemon + " loses " + damage + " hp");
+                System.out.println(gymPokemon.getName() + " loses " + damage + " hp");
                 updatedHP = gymPokemon.getHP() - damage;
                 gymPokemon.setHP(updatedHP);
-                System.out.println(gymPokemon + " has " + gymPokemon.getHP() + " HP left");
+                System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHP() + " HP left");
                 break;
             case "electric":
                 damage = 5;
-                System.out.println(gymPokemon + " loses " + damage + " hp");
+                System.out.println(gymPokemon.getName() + " loses " + damage + " hp");
                 updatedHP = gymPokemon.getHP() - damage;
                 gymPokemon.setHP(updatedHP);
-                System.out.println(gymPokemon + " has " + gymPokemon.getHP() + " HP left");
+                System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHP() + " HP left");
                 break;
         }
     }
