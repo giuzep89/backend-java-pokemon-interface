@@ -24,7 +24,6 @@ public class PokemonGymImpl implements PokemonGym {
         Pokemon pokemon = choosePokemon(player1);
         System.out.println(Main.ANSI_GREEN + player1.getName() + Main.ANSI_RESET + ": I'll choose you, " + pokemon.getName());
 
-        feedInBattle(pokemon);
         fightRound(player1, gymOwner, pokemon, gymPokemon);
 
     }
@@ -269,7 +268,7 @@ public class PokemonGymImpl implements PokemonGym {
     @Override
     public void attackOrChange(Pokemon pokemon, Pokemon gymPokemon, PokemonTrainer trainer, PokemonGymOwner gym){
         Scanner speler_A = new Scanner(System.in);
-
+        feedInBattle(pokemon);
         System.out.println("Do you want to attack or change your pokemon?");
         System.out.println("Type a for attack or c for change");
         String choice = speler_A.nextLine();
