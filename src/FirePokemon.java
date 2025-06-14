@@ -155,6 +155,7 @@ public class FirePokemon extends Pokemon{
         }
     }
 
+
     @Override
     public List<String> getAttacks() {
         return this.attacks;
