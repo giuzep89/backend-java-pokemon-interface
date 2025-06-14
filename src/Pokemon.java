@@ -47,6 +47,11 @@ public abstract class Pokemon {
         return this.HP;
     }
 
+    public void feed(){
+        int feedingTime = getHp() + 20;
+        setHP(feedingTime);
+    }
+
     public abstract String getType();
 
     public abstract List<String> getAttacks();

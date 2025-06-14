@@ -24,6 +24,7 @@ public class PokemonGymImpl implements PokemonGym {
         Pokemon pokemon = choosePokemon(player1);
         System.out.println(Main.ANSI_GREEN + player1.getName() + Main.ANSI_RESET + ": I'll choose you, " + pokemon.getName());
 
+        feedInBattle(pokemon);
         fightRound(player1, gymOwner, pokemon, gymPokemon);
 
     }
@@ -241,6 +242,28 @@ public class PokemonGymImpl implements PokemonGym {
                 }
             }
         }
+    }
+
+    @Override
+    public void feedInBattle(Pokemon pokemon) {
+        Scanner speler_A = new Scanner(System.in);
+        System.out.println("Would you like to feed your pokemon? Type yes or no");
+        String yesOrNo = speler_A.nextLine();
+
+        if (yesOrNo.equals("yes")){
+            System.out.println("What do you want to feed your pokemon?");
+            String food = speler_A.nextLine();
+
+            if (food.equals(pokemon.getFood())){
+                pokemon.feed();
+                System.out.println(pokemon.getName() + " has gained 20 hp!");
+            } else {
+                System.out.println("Your pokemon doesn't like this...");
+            }
+        } else {
+            System.out.println("Alright let's continue!");
+        }
+
     }
 
     @Override
