@@ -58,10 +58,23 @@ public class PokemonGymImpl implements PokemonGym {
             attackOrChange(pokemon, gymPokemon, trainer, owner);
 
         }
+
         if(pokemon.getHp() <= 0){
             System.out.println(gymPokemon.getName() + " has defeated " + pokemon.getName());
         } else if (gymPokemon.getHp() <= 0){
             System.out.println(pokemon.getName() + " has defeated " + gymPokemon.getName());
+        }
+
+        int i = 0;
+        for(Pokemon p : pokemons){
+            if (i == 6){
+                System.out.println("Your Pokemon are all exhausted! Train harder and come back again!");
+                System.exit(0);
+            }
+
+            if (p.getHP() <= 0){
+                i++;
+            }
         }
 
         System.out.println("Would you like to keep playing? yes or no");
@@ -98,7 +111,9 @@ public class PokemonGymImpl implements PokemonGym {
         }
         System.out.println("Please make your choice of pokemon to attack");
         for (Pokemon p : pokemons) {
-            System.out.println(p.getName());
+            if(p.getHP() > 0){
+                System.out.println(p.getName());
+            }
         }
         String pokemon = speler_A.nextLine();
         return selectPokemon(pokemon, trainer);
