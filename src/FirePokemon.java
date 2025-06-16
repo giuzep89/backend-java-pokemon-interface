@@ -11,7 +11,7 @@ public class FirePokemon extends Pokemon{
 
 
 
-    public void inferno(Pokemon gymPokemon, Pokemon pokemon) {
+    public void inferno(Pokemon pokemon, Pokemon gymPokemon) {
         System.out.println(pokemon.getName() + " attacks " + gymPokemon.getName() + " with inferno");
         int damage;
         int updatedHP;
@@ -47,7 +47,7 @@ public class FirePokemon extends Pokemon{
         }
     }
 
-    public void pyroBall(Pokemon gymPokemon, Pokemon pokemon) {
+    public void pyroBall(Pokemon pokemon, Pokemon gymPokemon) {
         System.out.println(pokemon.getName() + " attacks " + gymPokemon.getName() + " with pyroball");
         int damage;
         int updatedHP;
@@ -83,7 +83,7 @@ public class FirePokemon extends Pokemon{
         }
     }
 
-    public void fireLash(Pokemon gymPokemon, Pokemon pokemon) {
+    public void fireLash(Pokemon pokemon, Pokemon gymPokemon) {
         System.out.println(pokemon.getName() + " attacks " + gymPokemon.getName() + " with firelash");
         int damage;
         int updatedHP;
