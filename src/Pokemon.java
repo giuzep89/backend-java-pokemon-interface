@@ -8,14 +8,16 @@ public abstract class Pokemon {
     private int HP;
     private final String food;
     private final String sound;
+    private final String type;
 
 
-    public Pokemon(String name, int level, int HP, String food, String sound) {
+    public Pokemon(String name, int level, int HP, String food, String sound, String type) {
         this.name = name;
         this.level = level;
         this.sound = sound;
         this.food = food;
         this.HP = HP;
+        this.type = type;
     }
 
 

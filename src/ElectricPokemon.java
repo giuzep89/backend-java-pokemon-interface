@@ -2,11 +2,11 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ElectricPokemon extends Pokemon {
-    private final String type = "electric";
+    private final static String TYPE = "electric";
     private final List<String> attacks = Arrays.asList("thunderPunch", "electroBall", "thunder", "voltTackle");
 
     public ElectricPokemon(String name, int level, int HP, String food, String sound) {
-        super(name, level, HP, food, sound);
+        super(name, level, HP, food, sound, TYPE);
     }
 
     public void thunderPunch(Pokemon pokemon, Pokemon gymPokemon) {
@@ -161,6 +161,6 @@ public class ElectricPokemon extends Pokemon {
 
     @Override
     public String getType() {
-        return type;
+        return TYPE;
     }
 }
