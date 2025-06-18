@@ -1,4 +1,4 @@
-import java.util.List;
+import java.util.*;
 
 // Los in deze klasse alle foutmeldingen op door (abstracte) klassen met variabelen en methodes te maken en een interface met methodes (en soms een import).
 public class PokemonGymImpl implements PokemonGym {
@@ -58,10 +58,23 @@ public class PokemonGymImpl implements PokemonGym {
             attackOrChange(pokemon, gymPokemon, trainer, owner);
 
         }
+
         if(pokemon.getHp() <= 0){
             System.out.println(gymPokemon.getName() + " has defeated " + pokemon.getName());
         } else if (gymPokemon.getHp() <= 0){
             System.out.println(pokemon.getName() + " has defeated " + gymPokemon.getName());
+        }
+
+        int i = 0;
+        for(Pokemon p : pokemons){
+            if (i == 6){
+                System.out.println("Your Pokemon are all exhausted! Train harder and come back again!");
+                System.exit(0);
+            }
+
+            if (p.getHP() <= 0){
+                i++;
+            }
         }
 
         System.out.println("Would you like to keep playing? yes or no");
@@ -98,7 +111,9 @@ public class PokemonGymImpl implements PokemonGym {
         }
         System.out.println("Please make your choice of pokemon to attack");
         for (Pokemon p : pokemons) {
-            System.out.println(p.getName());
+            if(p.getHP() > 0){
+                System.out.println(p.getName());
+            }
         }
         String pokemon = speler_A.nextLine();
         return selectPokemon(pokemon, trainer);
@@ -244,9 +259,31 @@ public class PokemonGymImpl implements PokemonGym {
     }
 
     @Override
+    public void feedInBattle(Pokemon pokemon) {
+        Scanner speler_A = new Scanner(System.in);
+        System.out.println("Would you like to feed your pokemon? Type yes or no");
+        String yesOrNo = speler_A.nextLine();
+
+        if (yesOrNo.equals("yes")){
+            System.out.println("What do you want to feed your pokemon?");
+            String food = speler_A.nextLine();
+
+            if (food.equals(pokemon.getFood())){
+                pokemon.feed();
+                System.out.println(pokemon.getName() + " has gained 20 hp!");
+            } else {
+                System.out.println("Your pokemon doesn't like this...");
+            }
+        } else {
+            System.out.println("Alright let's continue!");
+        }
+
+    }
+
+    @Override
     public void attackOrChange(Pokemon pokemon, Pokemon gymPokemon, PokemonTrainer trainer, PokemonGymOwner gym){
         Scanner speler_A = new Scanner(System.in);
-
+        feedInBattle(pokemon);
         System.out.println("Do you want to attack or change your pokemon?");
         System.out.println("Type a for attack or c for change");
         String choice = speler_A.nextLine();

@@ -37,8 +37,6 @@ public class Main {
         if (speler_A.nextLine().equals("yes")) {
             pokemonGym.enteredTheGym(player1);
         }
-
     }
-
 
 }
