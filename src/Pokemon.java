@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.List;
 
 
@@ -45,12 +44,8 @@ public abstract class Pokemon {
         return sound;
     }
 
-    public int getHp() {
-        return this.HP;
-    }
-
     public void feed(){
-        int feedingTime = getHp() + 20;
+        int feedingTime = getHP() + 20;
         setHP(feedingTime);
     }
 
